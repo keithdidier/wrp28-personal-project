@@ -10,19 +10,19 @@ const products_controller = require('./controllers/products_controller');
 
 const app = express();
 
-// app.use(bodyParser.json());
-// app.use(session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: true
-// }))
+app.use(bodyParser.json());
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+}))
 
 // app.use(passport.initialize());
-// app.use(passport.session());
+// app.use(passport.session()); 
 
-// massive(process.env.CONNECTION_STRING).then(db => {
-//     app.set('db', db);
-// })
+massive(process.env.CONNECTION_STRING).then(db => {
+    app.set('db', db);
+})
 
 
 // passport.use(new Auth0Strategy({
