@@ -1,5 +1,18 @@
-.hero-banner {
-  width: 100%; }
-
 body {
   color: #303238; }
+
+.header {
+  position: relative; }
+
+.hero-banner {
+  max-width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto; }
+
+.quote-over-banner {
+  position: absolute;
+  top: 18%;
+  left: 32%;
+  margin-bottom: 4px; }

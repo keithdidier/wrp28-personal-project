@@ -18,11 +18,11 @@ export default class Nav extends Component {
                     {/* <span className="brand-name">redbubble</span> */}
                     <div className="login-and-cart-container">
                         <a href={process.env.REACT_APP_LOGIN}><button className="">Log in</button></a>
-                        <i>cart</i>
+                        <Link to="/cart" className="cart-icon"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                     </div>
                 </div>
-                <form>
-                    <i id="search-icon" class="fa fa-search" aria-hidden="true"></i>
+                <form className="search-form">
+                    <i id="search-icon" className="fa fa-search" aria-hidden="true"></i>
                     <input className="mobile-search-input"
                      type="search" 
                      placeholder="Search products" /> 

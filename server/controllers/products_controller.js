@@ -12,7 +12,7 @@ module.exports = {
         const { params } = req;
 
         db.product_by_id([params.id])
-            .then(singleProduct => res.status(200).send(singleProduct)) 
+            .then(singleProduct => res.status(200).send(singleProduct[0])) 
             .catch((err) => res.status(500).send(err));
     }
 }
