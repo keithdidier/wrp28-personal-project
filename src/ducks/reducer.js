@@ -1,15 +1,20 @@
+import axios from 'axios';
+
 const initialState = {
-    // products, productsInCart: []
+    // products, productsInCart: [], product_id
 };
 
-// Constants
+// Action types
+const DETAILS = "DETAILS";
 const ADD_TO_CART = "ADD_TO_CART";
-const CHECKOUT = "CHECKOUT"
+const CHECKOUT = "CHECKOUT";
 
 
 // Reducer
 export default function reducer(state = initialState, action) {
     switch(action.type) {
+        case DETAILS: 
+            return state.product_id
         case ADD_TO_CART:
             return state.productsInCart.includes(action.productId)
                 ?
@@ -26,6 +31,13 @@ export default function reducer(state = initialState, action) {
 }
 
 // Action creators
+
+export function productDetails() {
+    let getDetails = axios.get('/api/product:id').then(res => {
+        return res.data    
+    })
+}
+
 export function addToCart( productId) {
     return {productId, type: ADD_TO_CART};
 }

@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Nav.css';
+import 'font-awesome/css/font-awesome.min.css';
 import brandMark from '../../assets/redbubble-logo.jpg';
+import { Link } from 'react-router-dom';
 
 
 export default class Nav extends Component {
@@ -9,17 +11,22 @@ export default class Nav extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className="nav-wrapper">
                 <div className="main-nav">
-                    <img className="brand-mark" src={brandMark} />
+                    <Link to="/"><img className="brand-mark" src={brandMark} /></Link>
                     {/* <span className="brand-name">redbubble</span> */}
-                    <a href={ process.env.REACT_APP_LOGIN }><button>Log in</button></a>
-                    <i>cart</i>
+                    <div className="login-and-cart-container">
+                        <a href={process.env.REACT_APP_LOGIN}><button className="">Log in</button></a>
+                        <i>cart</i>
+                    </div>
                 </div>
-                <div>
-                    <input type="text" />
-                </div>
+                <form>
+                    <i id="search-icon" class="fa fa-search" aria-hidden="true"></i>
+                    <input className="mobile-search-input"
+                     type="search" 
+                     placeholder="Search products" /> 
+                </form>
             </div>
         )
     }

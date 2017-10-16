@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import rbTShirt from '../../assets/rb-t-shirt-white.jpg';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 export default class Products extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             myProducts: []
@@ -27,14 +28,13 @@ export default class Products extends Component {
     }
 
     render() {
-        console.log("want to see products" + JSON.stringify(this.state.myProducts))
         return (
             <div>
                 <h2>Feed</h2>
                 {/* <img src={rbTShirt} /> */}
                 {this.state.myProducts.map((item, index) => (
                      <div key={index}>
-                        <span>{item.product_name}</span>
+                        <Link to='/details'><span>{item.product_name}</span></Link>
                         <span>{item.price}</span>
                     </div>
                 ))
