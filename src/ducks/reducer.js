@@ -18,14 +18,9 @@ export default function reducer(state = initialState, action) {
         case DETAILS + "_FULFILLED":
             return Object.assign({}, state, {details: action.payload})
         case ADD_TO_CART:
-            return state.productsInCart.includes(action.productId)
-                ?
-                state
-                :
-                {
-                    products: state.products,
-                    productsInCart: [...state.productsInCart, action.productId]
-                };
+            let productsAdded = state.productsInCart.slice();
+            productsAdded.push(action.payload);
+                return Object.assign({}, state, {productsInCart: productsAdded}) 
         case CHECKOUT:
             return initialState;
         default: return state;
@@ -44,8 +39,11 @@ export function getDetails(id) {
     }
 }
 
-export function addToCart(productId) {
-    return { productId, type: ADD_TO_CART };
+export function addToCart(product) {
+    return {  
+        type: ADD_TO_CART,
+        payload: product 
+    };
 }
 
 export function checkout() {

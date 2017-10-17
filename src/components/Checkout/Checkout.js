@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Details from '../../ducks/reducer';
 
 export default class Checkout extends Component {
     constructor() {
@@ -7,7 +8,8 @@ export default class Checkout extends Component {
 
     render() {
         return(
-            <div></div>
+            <div>
+            </div>
         )
     }
 }

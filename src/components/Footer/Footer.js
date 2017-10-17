@@ -11,15 +11,15 @@ export default class Footer extends Component {
         return(
             <div>
                 <footer className="footer">
-                    <ul>
-                        <li>About us</li>
-                        <li>Delivery</li>
-                        <li>Jobs</li>
-                        <li>Contact us</li>
-                        <li>Blog</li>
-                        <li>Investor centre</li>
-                        <li>Returns</li>
-                        <li>Help</li>
+                    <ul className="footer-links">
+                        <li className="footer-links-links">About us</li>
+                        <li className="footer-links-links">Delivery</li>
+                        <li className="footer-links-links">Jobs</li>
+                        <li className="footer-links-links">Contact us</li>
+                        <li className="footer-links-links">Blog</li>
+                        <li className="footer-links-links">Investor centre</li>
+                        <li className="footer-links-links">Returns</li>
+                        <li className="footer-links-links">Help</li>
                     </ul>
                 </footer>
             </div>

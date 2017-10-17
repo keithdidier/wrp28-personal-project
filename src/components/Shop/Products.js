@@ -36,7 +36,7 @@ class Products extends Component {
                 {this.state.myProducts.map((item, index) => (
                      <div key={index}>
                         <Link to='/details' onClick={() => this.props.getDetails(item.product_id)}><span>{item.product_name}</span></Link>
-                        <span>{item.price}</span>
+                        <span>${item.price}</span>
                     </div>
                 ))
                 }
