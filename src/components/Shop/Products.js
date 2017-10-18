@@ -4,6 +4,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {getDetails} from '../../ducks/reducer';
 import { connect } from 'react-redux';
+import './Products.css';
 
 
 class Products extends Component {
@@ -30,16 +31,20 @@ class Products extends Component {
 
     render() {
         return (
-            <div>
+            <div className="products-feed-wrapper">
                 <h2>Feed</h2>
-                {/* <img src={rbTShirt} /> */}
-                {this.state.myProducts.map((item, index) => (
-                     <div key={index}>
-                        <Link to='/details' onClick={() => this.props.getDetails(item.product_id)}><span>{item.product_name}</span></Link>
-                        <span>${item.price}</span>
-                    </div>
-                ))
-                }
+                    <section className="list-of-products">
+                        {this.state.myProducts.map((item, index) => (
+                            <div className="product-container" key={index}>
+                                <Link to='/details' onClick={() => 
+                                this.props.getDetails(item.product_id)}>
+                                <img className="product-img" src={item.image_url} />
+                                <h5 id="product-name">{item.product_name}</h5></Link>
+                                <span>${item.price}</span>
+                            </div>
+                        ))
+                        }
+                    </section>
             </div>
         )
     }

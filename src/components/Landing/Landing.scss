@@ -4,16 +4,23 @@ body {
     color: $text-color;
 }
 
+.landing-conetent {
+    width: 100%;
+}
+
 .header {
     position: relative;
 }
 
 .hero-banner {
-    max-width: 100%;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+    background-image: url('https://d3spquiph2sexc.cloudfront.net/assets/hero-banner/hero-desktop-96cf31056bec0de967575f53d1f063508cf8889968d79fdf8924b253cb05ece8.jpg');
+    background-size: cover;
+    background-position: center center;
+    // max-width: 100%;
+    // min-height: 300px;
+    // display: flex;
+    // align-items: center;
+    // margin: 0 auto;
 }
 
 .quote-over-banner {
@@ -21,4 +28,18 @@ body {
     top: 18%;
     left: 32%;
     margin-bottom: 4px;
+}
+
+@media(min-width: 700px) {
+    .hero-banner {
+        height: 55vh;
+        width: 100vw;
+    }
+
+    .quote-over-banner {
+        position: absolute;
+        top: 24%;
+        left: 38%;
+        margin-bottom: 4px;
+    }
 }
