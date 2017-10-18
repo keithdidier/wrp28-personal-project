@@ -2,7 +2,7 @@ body {
   color: #303238; }
 
 .landing-conetent {
-  width: 100%; }
+  width: 80%; }
 
 .header {
   position: relative; }
@@ -18,7 +18,22 @@ body {
   left: 32%;
   margin-bottom: 4px; }
 
-@media (min-width: 700px) {
+.tagline {
+  color: #fff;
+  position: absolute;
+  top: 57%;
+  left: 37%;
+  font-size: 16px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  letter-spacing: 0.04em;
+  line-height: 1.2em;
+  text-shadow: none;
+  font-weight: 400;
+  max-width: 240px;
+  margin: 0 auto; }
+
+@media (min-width: 641px) {
   .hero-banner {
     height: 55vh;
     width: 100vw; }
@@ -27,3 +42,9 @@ body {
     top: 24%;
     left: 38%;
     margin-bottom: 4px; } }
+
+@media (max-width: 900px) {
+  .hero-banner {
+    background-image: url("https://d3spquiph2sexc.cloudfront.net/assets/hero-banner/hero-mobile-59649a8bef8fd514fedd100ed48c520c8fc0a0b31b0d1494c71a69ca3eaa2267.jpg");
+    height: 46vh;
+    width: 100%; } }

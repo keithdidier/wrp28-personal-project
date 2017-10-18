@@ -6,6 +6,7 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const products_controller = require('./controllers/products_controller');
+const stripe = require('stripe');
 
 
 const app = express();

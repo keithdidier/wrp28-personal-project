@@ -32,7 +32,7 @@ class Products extends Component {
     render() {
         return (
             <div className="products-feed-wrapper">
-                <h2>Feed</h2>
+                <h2 className="feed">Feed</h2>
                     <section className="list-of-products">
                         {this.state.myProducts.map((item, index) => (
                             <div className="product-container" key={index}>

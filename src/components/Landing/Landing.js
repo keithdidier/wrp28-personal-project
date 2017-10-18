@@ -22,6 +22,7 @@ export default class Landing extends Component {
                 <section className="header">
                     <img className="hero-banner"/>
                     <img className="quote-over-banner" src={findYourThingSVG} />
+                    <h2 className="tagline">awesome products designed by independent artists</h2>
                 </section>
                 
                 <Shop />

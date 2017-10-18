@@ -1,5 +1,10 @@
 @import "theme";
 
+
+.nav-wrapper {
+    margin-bottom: 15px;
+}
+
 .brand-mark {
     width: 200px;
 }
@@ -8,6 +13,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   border-bottom: 1px solid $secondary-color;
 }
 .login-and-cart-container {
     display: flex;
@@ -47,12 +53,29 @@
 }
 
 .search-form {
-    margin: 0px 30px 15px 30px;
+    margin: 15px 30px 15px 30px;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1600px) {
 
     .login-and-cart-container {
         display: flex;
     }
-} 
+
+    #search-icon {
+        position: absolute;
+        z-index: 1;
+        top: 28%;
+        left: 1.5%;
+        color: $icon-color;
+        cursor: pointer;
+        width: 0;
+    }
+}
+
+@media(min-width: 1024px) {
+
+    .search-form {
+        margin: 15px 200px 15px 200px;
+    }
+}

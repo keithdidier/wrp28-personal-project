@@ -20,7 +20,8 @@ import './Details.css';
                 <h2>{color}</h2>
                 <h2>{size}</h2>
                 <h2>{price}</h2>
-                <button onClick={() => this.props.addToCart(this.props.details)}>Add to Cart</button>
+                <button className="add-to-cart" onClick={() => this.props.addToCart(this.props.details)}>Add to Cart</button>
+                <Link to="/cart"><button className="view-cart"><span>View Cart</span></button></Link>
             </div>
         )
     }
