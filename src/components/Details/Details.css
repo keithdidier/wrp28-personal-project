@@ -1,8 +1,8 @@
 .product-wrapper {
-  margin: 0 20%; }
+  margin: 0 10%; }
 
 .details-img {
-  width: 30%; }
+  width: 60%; }
 
 .add-to-cart {
   position: relative;
@@ -22,7 +22,7 @@
 
 .add-to-cart:after {
   content: "";
-  background: #90EE90;
+  background: #F5F5F5;
   display: block;
   position: absolute;
   padding-top: 300%;

@@ -17,7 +17,7 @@ export default class Nav extends Component {
                     <Link to="/"><img className="brand-mark" src={brandMark} /></Link>
                     {/* <span className="brand-name">redbubble</span> */}
                     <div className="login-and-cart-container">
-                        <a href={process.env.REACT_APP_LOGIN}><button className="">Log in</button></a>
+                        <a href={process.env.REACT_APP_LOGIN}><button className="">Log In</button></a>
                         <Link to="/cart" className="cart-icon"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ export default class Nav extends Component {
                     <i id="search-icon" className="fa fa-search" aria-hidden="true"></i>
                     <input className="mobile-search-input"
                      type="search" 
-                     placeholder="Search products" /> 
+                     placeholder="Search products by color, name, and price..." /> 
                 </form>
             </div>
         )

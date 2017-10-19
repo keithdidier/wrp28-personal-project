@@ -16,10 +16,10 @@ import './Details.css';
         return(
             <div className="product-wrapper">
                 <img className="details-img" src={image_url}/>
-                <h2>{product_name}</h2>
-                <h2>{color}</h2>
-                <h2>{size}</h2>
-                <h2>{price}</h2>
+                <h2>Name: {product_name}</h2>
+                <h2>Color: {color}</h2>
+                <h2>Size: {size}</h2>
+                <h2 className="item-price">${price}</h2>
                 <button className="add-to-cart" onClick={() => this.props.addToCart(this.props.details)}>Add to Cart</button>
                 <Link to="/cart"><button className="view-cart"><span>View Cart</span></button></Link>
             </div>

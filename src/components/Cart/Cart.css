@@ -1,2 +1,5 @@
 .cart-wrapper {
-  margin: 0 20%; }
+  margin: 0 10%; }
+
+.item-price {
+  color: #4292e3; }

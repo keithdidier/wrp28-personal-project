@@ -11,20 +11,17 @@
 .list-of-products {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: flex-end;
     align-items: center;
-    margin: 0% 5% 0% 5%;
+    // margin: 0% 1% 0% 1%;
 }
 
 .product-container {
     background-color: cornflowerblue;
-    margin: 0 auto;
-    display: block;
+    margin: 10px auto;
 }
 
 .product-img {
-    height: 190px;
-    width: 190px;
+    width: 30%;
 }
 
 .product-name {

@@ -6,6 +6,7 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const products_controller = require('./controllers/products_controller');
+const cart_controller = require('./controllers/cart_controller')
 const stripe = require('stripe');
 
 
@@ -83,6 +84,8 @@ passport.deserializeUser(function (id, done) {
 
 app.get('/api/products', products_controller.getAll);
 app.get('/api/product/:id', products_controller.getOne);
+app.post('/api/cart/:product_id/:user_id', cart_controller.addToCart);
+app.get('/api/cart/items/:user_id', cart_controller.getItemsInCart);
 
 const PORT = 3010;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

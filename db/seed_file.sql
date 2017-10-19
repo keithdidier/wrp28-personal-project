@@ -34,3 +34,13 @@ insert into products (
 )
 values 
 ()
+
+/******** Data in products table 
+
+('Magic Cat', 'https://s3.amazonaws.com/redbubble-clone/magic-cat-hoodie.jpg', 46.88, 'Medium', 'Grey')
+('Jellyfish', 'https://s3.amazonaws.com/redbubble-clone/jellyfish-t-shirt.jpg', 29.50, 'Medium', 'Black'),
+('Medusa', 'https://s3.amazonaws.com/redbubble-clone/medusa-t-shirt.jpg', 27.50, 'Large', 'Green'),
+('The Mountains Are Calling', 'https://s3.amazonaws.com/redbubble-clone/mountains-tank-top.jpg', 22.18, 'Medium', 'Dark Blue'),
+('Octopus Scuba Diver', 'https://s3.amazonaws.com/redbubble-clone/octopus-t-shirt.jpg', 21.13, 'Medium', 'Light Blue')
+
+*********/
