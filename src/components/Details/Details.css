@@ -1,6 +1,9 @@
 .product-wrapper {
   margin: 0 10%; }
 
+.item-price {
+  color: #4292e3; }
+
 .details-img {
   width: 60%; }
 

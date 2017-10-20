@@ -4,13 +4,17 @@
   margin: $contain;
 }
 
+.item-price {
+  color: $tertiary-color;
+}
+
 .details-img {
     width: 60%;
 }
 
 .add-to-cart {
     position: relative;
-    background-color: $shopping-btn-color;
+    background-color: $tertiary-color;
     border: none;
     font-size: 28px;
     color: #FFFFFF;
@@ -46,7 +50,7 @@
 
 .view-cart {
     border-radius: 4px;
-    background-color: $shopping-btn-color;
+    background-color: $tertiary-color;
     border: none;
     color: #FFFFFF;
     text-align: center;
