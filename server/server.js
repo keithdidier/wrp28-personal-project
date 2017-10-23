@@ -6,7 +6,8 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const products_controller = require('./controllers/products_controller');
-const cart_controller = require('./controllers/cart_controller')
+const cart_controller = require('./controllers/cart_controller');
+const users_controller = require('./controllers/users_controller');
 const stripe = require('stripe')('config.secret_key');
 
 
@@ -62,7 +63,7 @@ app.get('/auth/callback', passport.authenticate('auth0', {
 app.get('/auth/me', (req, res) => {
     if(!req.user) {
         return res.status(404).send('User not found');
-    }
+    } 
     return res.status(200).send(req.user);
 })
 
@@ -103,6 +104,7 @@ app.get('/api/products', products_controller.getAll);
 app.get('/api/product/:id', products_controller.getOne);
 app.post('/api/cart/:product_id/:user_id', cart_controller.addToCart);
 app.get('/api/cart/items/:user_id', cart_controller.getItemsInCart);
+app.get('/api/current/user', users_controller.getCurrentUser);
 
 const PORT = 3010;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

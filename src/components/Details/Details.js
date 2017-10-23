@@ -1,15 +1,36 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import {getDetails} from '../../ducks/reducer';
 import {addToCart} from '../../ducks/reducer';
+import {getUser} from '../../ducks/reducer';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import './Details.css';
 
- class Details extends Component {
+class Details extends Component {
     constructor() {
         super();
 
+    this.state = {
+        userId: null
     }
+    this.addToCart = this.addToCart.bind(this)    
+}
+
+componentDidMount() {
+    this.props.getUser()
+    this.setState({
+        userId: this.props.id
+    })
+}
+
+addToCart() {
+    if(this.state.userId) {
+        this.props.addToCart(this.props.details, this.state.userId)
+    } else {
+        alert("Please log in");
+    }
+}
 
     render() {
         let {image_url, product_name, color, size, price} = this.props.details; 
@@ -25,7 +46,7 @@ import './Details.css';
                         <h2 className="item-color">{color}</h2></h2>
                     <h2 className="item-information">Size
                         <h2 className="item-size">{size}</h2></h2>
-                    <button className="add-to-cart" onClick={() => this.props.addToCart(this.props.details)}>Add to Cart</button>
+                    <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
                     <Link to="/cart"><button className="view-cart"><span>View Cart</span></button></Link>
                 </div>
             </div>
@@ -37,4 +58,4 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connect(mapStateToProps, {addToCart})(Details);
+export default connect(mapStateToProps, {addToCart, getUser})(Details);

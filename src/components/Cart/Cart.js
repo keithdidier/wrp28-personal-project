@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {addToCart} from '../../ducks/reducer';
-import {getDetails} from '../../ducks/reducer'
+import {getDetails} from '../../ducks/reducer';
+import {getItemsInCart} from '../../ducks/reducer';
 import {connect} from 'react-redux';
 import './Cart.css';
 import emptyCart from '../../assets/empty-cart.gif';
