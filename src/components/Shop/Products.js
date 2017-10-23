@@ -40,7 +40,7 @@ class Products extends Component {
                                 this.props.getDetails(item.product_id)}>
                                 <img className="product-img" src={item.image_url} />
                                 <h5 id="product-name">{item.product_name}</h5></Link>
-                                <span>${item.price}</span>
+                                <h5 id="product-price">${item.price}</h5>
                             </div>
                         ))
                         }

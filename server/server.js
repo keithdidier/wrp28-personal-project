@@ -7,7 +7,8 @@ const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const products_controller = require('./controllers/products_controller');
 const cart_controller = require('./controllers/cart_controller')
-const stripe = require('stripe');
+const stripe = require('stripe')('config.secret_key');
+
 
 
 const app = express();
@@ -82,6 +83,22 @@ passport.deserializeUser(function (id, done) {
     }) 
 })
 
+// Stripe API 
+app.post('/api/payment', function(req, res, next){
+    const charge = stripe.charges.create({
+        amount: null,
+        currency: "usd",
+        source: req.body.token.id,
+        description: "Test charge for react-app"
+    }, function(err, charge) {
+        if(err) return res.sendStatus(500) 
+            return res.sendStatus(200);
+    });
+})
+
+
+
+// Database endpoints
 app.get('/api/products', products_controller.getAll);
 app.get('/api/product/:id', products_controller.getOne);
 app.post('/api/cart/:product_id/:user_id', cart_controller.addToCart);

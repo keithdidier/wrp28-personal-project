@@ -1,0 +1,14 @@
+.footer {
+  color: #fff;
+  background-color: #303238;
+  height: 10rem;
+  width: 100%;
+  text-align: center; }
+
+.footer-links {
+  display: flex; }
+
+.footer-links-links {
+  text-transform: uppercase;
+  font-size: 1rem;
+  list-style: none; }

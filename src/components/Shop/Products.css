@@ -1,20 +1,25 @@
 .products-feed-wrapper {
-  margin: 0 10%; }
+  margin: 5% 10%; }
 
 .feed {
   text-align: center; }
 
 .list-of-products {
   display: flex;
-  flex-wrap: wrap;
   align-items: center; }
 
 .product-container {
   background-color: cornflowerblue;
-  margin: 10px auto; }
+  margin: 10px 10px;
+  text-decoration: none; }
 
 .product-img {
-  width: 30%; }
+  width: 100%; }
 
-.product-name {
-  margin: auto; }
+#product-name {
+  margin: 0;
+  color: #303238; }
+
+#product-price {
+  margin: 5px 0px;
+  color: #303238; }
