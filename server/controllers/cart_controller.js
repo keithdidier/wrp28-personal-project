@@ -10,7 +10,7 @@ module.exports = {
 
     getItemsInCart: (req, res, next) => {
         const db = req.app.get('db');
-        const {product_id, user_id}= req.params;
+        const {user_id}= req.params;
         
         db.get_items_in_cart([user_id])
         .then(items => res.status(200).send(items))

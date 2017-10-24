@@ -100,10 +100,13 @@ app.post('/api/payment', function(req, res, next){
 
 
 // Database endpoints
+    // Products controller
 app.get('/api/products', products_controller.getAll);
 app.get('/api/product/:id', products_controller.getOne);
+    // Cart controller
 app.post('/api/cart/:product_id/:user_id', cart_controller.addToCart);
 app.get('/api/cart/items/:user_id', cart_controller.getItemsInCart);
+    // User controller
 app.get('/api/current/user', users_controller.getCurrentUser);
 
 const PORT = 3010;

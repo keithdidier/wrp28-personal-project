@@ -11,25 +11,15 @@ class Details extends Component {
     constructor() {
         super();
 
-    this.state = {
-        userId: null
-    }
-    this.addToCart = this.addToCart.bind(this)    
+    this.addToCart = this.addToCart.bind(this);     
 }
 
 componentDidMount() {
     this.props.getUser()
-    this.setState({
-        userId: this.props.id
-    })
 }
 
 addToCart() {
-    if(this.state.userId) {
-        this.props.addToCart(this.props.details, this.state.userId)
-    } else {
-        alert("Please log in");
-    }
+    this.props.addToCart(this.props.details, this.props.userId)
 }
 
     render() {

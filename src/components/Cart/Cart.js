@@ -11,6 +11,11 @@ class Cart extends Component {
         super();
     }
 
+    componentDidMount() { 
+        
+        this.props.getItemsInCart(this.props.userId)
+    }
+
     render() {
         return(
             <div className="cart-wrapper">
@@ -36,4 +41,4 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connect(mapStateToProps, {addToCart, getDetails})(Cart);
+export default connect(mapStateToProps, {addToCart, getDetails, getItemsInCart})(Cart);
