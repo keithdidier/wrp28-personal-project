@@ -11,4 +11,10 @@
 .footer-links-links {
   text-transform: uppercase;
   font-size: 1rem;
-  list-style: none; }
+  list-style: none;
+  color: red; }
+
+@media (max-width: 641px) {
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap; } }

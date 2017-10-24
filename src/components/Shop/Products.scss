@@ -33,3 +33,10 @@
     margin: 5px 0px;
     color: $text-color;
 }
+
+@media(max-width: 641px) {
+    .list-of-products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -63,7 +63,7 @@ export function addToCart(product, user_id) {
     })
     return {  
         type: ADD_TO_CART,
-        payload: productsAdded 
+        payload: product // change back to productsAdded after styling 
     };
 }
 
