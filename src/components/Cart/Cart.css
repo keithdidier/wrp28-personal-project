@@ -1,8 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 .cart-wrapper {
   margin: 5% 10%;
   margin-bottom: 2em;
   margin-top: 2em;
   padding: 0 10em; }
+
+.lead-cart {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #4B4F59;
+  padding: 15px 0; }
 
 .details-img-cart {
   width: 50%;
@@ -11,12 +20,16 @@
 .item-details-cart {
   display: flex;
   padding: 20px 50px 20px 2px;
-  border-bottom: 2.5px solid #f2f2f6; }
+  border-bottom: 2.5px solid #f2f2f6;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4B4F59; }
 
 .item-size-cart,
 .item-color-cart {
   margin: 0 5px;
-  color: #303238; }
+  color: #4B4F59; }
 
 .delete-icon {
   padding: 8px;
@@ -24,6 +37,7 @@
 
 .item-price-cart {
   color: #4292e3;
+  font-weight: 300;
   margin: 0 5px;
   padding-left: 70%; }
 
@@ -46,6 +60,6 @@
   .item-size-cart,
   .item-color-cart {
     margin: 0 5px;
-    color: #303238; }
+    color: #4B4F59; }
   .item-price-cart {
     padding-left: 100px; } }

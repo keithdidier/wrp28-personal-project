@@ -17,7 +17,8 @@ export default class Nav extends Component {
                     <Link to="/"><img className="brand-mark" src={brandMark} /></Link>
                     {/* <span className="brand-name">redbubble</span> */}
                     <div className="login-and-cart-container">
-                        <a href={process.env.REACT_APP_LOGIN}><button className="">Log In</button></a>
+                        <a href={process.env.REACT_APP_LOGIN}><span className="nav-login">Login</span></a>
+                        <a href='http://localhost:3010/auth/logout'><span className="nav-logout">Logout</span></a>
                         <Link to='/cart' className="cart-icon"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                     </div>
                 </div>

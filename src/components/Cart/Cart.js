@@ -23,11 +23,10 @@ class Cart extends Component {
     render() {
         return(
             <div className="cart-wrapper">
-                <h2>Your shopping cart</h2>
+                <h2 className="lead-cart">Your shopping cart</h2>
                 <div>
                     {/* {!this.props.productsInCart ?  */}
                     <div>
-                    <p>Nothing in cart</p>
                     {/* <img className="sad-cart" src={emptyCart} /> */}
                     </div>
                     {/* : null } */}

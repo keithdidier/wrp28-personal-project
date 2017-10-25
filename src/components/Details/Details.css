@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 .product-wrapper {
   margin: 5% 10%;
   margin-bottom: 2em;
@@ -14,29 +15,42 @@
   float: right;
   padding: 20px 0; }
 
-.name-and-price-container {
+.name-and-price-container,
+.item-title,
+.item-price {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 5px 0; }
 
 .item-information {
-  font-family: serif; }
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 5px 0;
+  color: #4B4F59; }
 
-.item-title,
 .item-color,
-.item-size,
-.item-price {
-  margin: 2px 0px;
+.item-size {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  font-family: monospace; }
+  color: #4B4F59; }
 
 .add-to-cart {
   position: relative;
   background-color: #4292e3;
   border: none;
   border-radius: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 12px;
   color: #FFFFFF;
+  margin-top: 20px;
   padding: 10px;
   width: 200px;
   text-align: center;
@@ -71,7 +85,10 @@
   border: none;
   color: #FFFFFF;
   text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 12px;
+  margin-top: 20px;
   padding: 10px;
   width: 200px;
   transition: all 0.5s;
@@ -115,4 +132,6 @@
   .add-to-cart,
   .view-cart {
     width: 100%;
-    margin: 2%; } }
+    margin: 2%; }
+  .add-to-cart {
+    margin-top: 20px; } }

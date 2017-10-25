@@ -38,9 +38,11 @@ class Products extends Component {
                             <div className="product-container" key={index}>
                                 <Link to='/details' onClick={() => 
                                 this.props.getDetails(item.product_id)}>
-                                <img className="product-img" src={item.image_url} />
-                                <h5 id="product-name">{item.product_name}</h5></Link>
+                                <img className="product-img" src={item.image_url} /></Link>
+                            <div className="product-info">    
+                                <h5 id="product-name">{item.product_name}</h5>
                                 <h5 id="product-price">${item.price}</h5>
+                            </div>
                             </div>
                         ))
                         }

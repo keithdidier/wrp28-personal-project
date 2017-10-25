@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 .nav-wrapper {
   margin-bottom: 15px; }
 
@@ -14,8 +15,17 @@
 .login-and-cart-container {
   display: flex;
   justify-content: space-between;
-  width: 80px;
+  align-items: center;
+  width: 22%;
   margin-right: 10px; }
+
+.nav-login,
+.nav-logout {
+  display: inline-block;
+  color: #4B4F59;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300; }
 
 .cart-icon {
   color: #7B7B7B; }
@@ -49,7 +59,9 @@
 
 @media (max-width: 1600px) {
   .login-and-cart-container {
-    display: flex; }
+    display: flex;
+    justify-content: space-around;
+    width: 30%; }
   #search-icon {
     position: absolute;
     z-index: 1;
@@ -61,4 +73,8 @@
 
 @media (min-width: 1024px) {
   .search-form {
-    margin: 15px 200px 15px 200px; } }
+    margin: 15px 200px 15px 200px; }
+  .login-and-cart-container {
+    display: flex;
+    justify-content: space-around;
+    width: 12%; } }

@@ -7,6 +7,15 @@
     padding: 0 10em;
 }
 
+.lead-cart {
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 20px;
+    color: $text-color;
+    padding: 15px 0;
+}
+
 .details-img-cart {
     width: 50%;
     margin: 2em 0;
@@ -14,9 +23,12 @@
 
 .item-details-cart  {
     display: flex;
-    // float: right;
     padding: 20px 50px 20px 2px;
     border-bottom: 2.5px solid $secondary-color;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 16px;
+    color: $text-color;
 }
 
 // .item-title-cart,
@@ -33,6 +45,7 @@
 
 .item-price-cart {
     color: $tertiary-color;
+    font-weight: 300;
     margin: 0 5px;
     padding-left: 70%;
 }

@@ -18,8 +18,18 @@
 .login-and-cart-container {
     display: flex;
     justify-content: space-between;
-    width: 80px;
+    align-items: center;
+    width: 22%;
     margin-right: 10px;
+}
+
+.nav-login,
+.nav-logout {
+    display: inline-block;
+    color: $text-color;
+    font-size: 16px;
+    font-family: $primary-font;
+    font-weight: 300;
 }
 
 .cart-icon {
@@ -60,6 +70,8 @@
 
     .login-and-cart-container {
         display: flex;
+        justify-content: space-around;
+        width: 30%;
     }
 
     #search-icon {
@@ -78,4 +90,11 @@
     .search-form {
         margin: 15px 200px 15px 200px;
     }
+
+    .login-and-cart-container {
+        display: flex;
+        justify-content: space-around;
+        width: 12%;
+    }
+
 }
