@@ -8,6 +8,12 @@ returning *;
 select * from users 
 where auth_id = $1
 
+delete from cart 
+where cart_id = $1
+returning *
+
+select * from users 
+where id = $1;
 
 create table if not exists users (
     id serial primary key,
@@ -16,9 +22,6 @@ create table if not exists users (
     email varchar(180),
     auth_id text
 )
-
-select * from users 
-where id = $1;
 
 create table products (
     product_id serial primary key,

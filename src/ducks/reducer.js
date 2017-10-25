@@ -4,7 +4,8 @@ const initialState = {
     products: [],
     productsInCart: [],
     details: {},
-    userId: null
+    userId: null,
+    itemToRemove: []
 };
 
 // Action types
@@ -29,8 +30,8 @@ export default function reducer(state = initialState, action) {
                 return Object.assign({}, state, {productsInCart: productsAdded});
         case GET_ITEMS_IN_CART + '_FULFILLED':
                 return Object.assign({}, state, {productsInCart: action.payload});
-        case REMOVE_FROM_CART:
-
+        case REMOVE_FROM_CART + '_FULFILLED':
+                return Object.assign({}, state, {productsInCart: action.payload})
         case CHECKOUT:
             return initialState;
         default: return state;
@@ -63,7 +64,7 @@ export function addToCart(product, user_id) {
     })
     return {  
         type: ADD_TO_CART,
-        payload: product // change back to productsAdded after styling 
+        payload: productsAdded // change back to productsAdded after styling 
     };
 }
 
@@ -77,8 +78,14 @@ export function getItemsInCart(user_id) {
     }
 }
 
-export function removeFromCart() {
-
+export function removeFromCart(cart_id, user_id) {
+    let itemRemoved = axios.delete(`/api/cart/remove/${cart_id}/${user_id}`).then(res => {
+        return res.data
+    })
+    return {
+        type: REMOVE_FROM_CART,
+        payload: itemRemoved
+    }
 }
 
 export function checkout() {
