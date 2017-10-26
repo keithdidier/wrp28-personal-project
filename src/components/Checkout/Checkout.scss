@@ -1,1 +1,46 @@
 @import "_theme";
+
+.checkout-wrapper {
+    margin: 5% 25%;
+    background: $secondary-color;
+    border-radius: 10px;
+}
+
+.lead-shipping-details {
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 20px;
+    color: $text-color;
+    padding: 15px 0;
+}
+
+.checkout-textfield {
+    text-align: center;
+    margin: 0 3%;
+}
+
+.lead-card-checkout {
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 20px;
+    color: $text-color;
+    padding: 15px 0;
+}
+
+.stripe-icon {
+    color: $tertiary-color;
+    padding-bottom: 10px;
+}
+
+.stripe-btn {
+    text-align: center;
+    padding: 8% 0;
+}
+
+@media(max-width: 700px) {
+    .checkout-wrapper {
+        margin: 5% 10%;
+    }
+}

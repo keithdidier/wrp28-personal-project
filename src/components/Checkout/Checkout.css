@@ -1,1 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
+.checkout-wrapper {
+  margin: 5% 25%;
+  background: #f2f2f6;
+  border-radius: 10px; }
+
+.lead-shipping-details {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #4B4F59;
+  padding: 15px 0; }
+
+.checkout-textfield {
+  text-align: center;
+  margin: 0 3%; }
+
+.lead-card-checkout {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #4B4F59;
+  padding: 15px 0; }
+
+.stripe-icon {
+  color: #4292e3;
+  padding-bottom: 10px; }
+
+.stripe-btn {
+  text-align: center;
+  padding: 8% 0; }
+
+@media (max-width: 700px) {
+  .checkout-wrapper {
+    margin: 5% 10%; } }

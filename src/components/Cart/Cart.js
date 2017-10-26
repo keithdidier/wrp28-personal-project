@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import './Cart.css';
 import {addToCart} from '../../ducks/reducer';
 import {getDetails} from '../../ducks/reducer';
 import {getItemsInCart} from '../../ducks/reducer';
 import {removeFromCart} from '../../ducks/reducer';
 import {connect} from 'react-redux';
-import './Cart.css';
+import {Link} from 'react-router-dom';
 import emptyCart from '../../assets/empty-cart.gif';
 
 class Cart extends Component {
@@ -46,6 +47,9 @@ class Cart extends Component {
                     </div>
                 ))
                 }
+                <div className="checkout-btn-container">
+                    <Link to='/checkout'><button className="go-to-checkout"><span>Proceed to checkout</span></button></Link>
+                </div>
             </div>
         )
     }
