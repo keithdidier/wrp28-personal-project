@@ -34,8 +34,6 @@
     color: $text-color;
 }
 
-
-
 .item-title-cart,
 .item-size-cart,
 .item-color-cart {
@@ -44,9 +42,17 @@
 }
 
 .delete-icon {
-    padding: 8px;
-    color: #E43D3D;
+    color: $icon-color;
     cursor: pointer;
+    width: 0;
+}
+
+.delete-icon:hover {
+    color: #E43D3D;
+}
+
+.delete-icon:after {
+    color: $icon-color;
 }
 
 .item-price-cart {
@@ -144,7 +150,17 @@
     }
 
     .delete-icon {
-        padding: 0px;
+        color: $icon-color;
+        cursor: pointer;
+        width: 0;
+    }
+    
+    .delete-icon:hover {
+        color: #E43D3D;
+    }
+    
+    .delete-icon:after {
+        color: $icon-color;
     }
 }
 

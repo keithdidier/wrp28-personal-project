@@ -36,9 +36,15 @@
   color: #4B4F59; }
 
 .delete-icon {
-  padding: 8px;
-  color: #E43D3D;
-  cursor: pointer; }
+  color: #7B7B7B;
+  cursor: pointer;
+  width: 0; }
+
+.delete-icon:hover {
+  color: #E43D3D; }
+
+.delete-icon:after {
+  color: #7B7B7B; }
 
 .item-price-cart {
   color: #4292e3;
@@ -112,7 +118,13 @@
     font-size: 16px;
     margin-top: 5px; }
   .delete-icon {
-    padding: 0px; } }
+    color: #7B7B7B;
+    cursor: pointer;
+    width: 0; }
+  .delete-icon:hover {
+    color: #E43D3D; }
+  .delete-icon:after {
+    color: #7B7B7B; } }
 
 @media (max-width: 1024px) {
   .go-to-checkout {
