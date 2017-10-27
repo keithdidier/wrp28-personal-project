@@ -44,7 +44,7 @@ class Cart extends Component {
                             </div>
                             <span className="delete-icon" 
                             onClick={() =>{this.props.removeFromCart(item.cart_id, this.props.userId)}}>
-                            <i className="fa fa-times-circle fa-lg" aria-hidden="true"></i></span>
+                            <i className="fa fa-times-circle fa-2x" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 ))

@@ -1,4 +1,5 @@
 @import "theme";
+
 body {
     color: $text-color;
 }
@@ -20,7 +21,7 @@ body {
 .quote-over-banner {
     position: absolute;
     top: 18%;
-    left: 32%;
+    left: 28%;
     margin-bottom: 4px;
 }
 
@@ -67,7 +68,7 @@ body {
     .tagline {
         position: absolute;
         top: 58%;
-        left: 26%;
+        left: 28%;
         word-break: break-all;
     }
 }

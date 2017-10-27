@@ -33,13 +33,31 @@ addToCart() {
                         <h2 className="item-price">${price}</h2>
                     </div>
                     <div className="item-information">
-                    <h2 className="item-information">Color
-                        <h2 className="item-color">{color}</h2></h2>
-                    <h2 className="item-information">Size
-                        <h2 className="item-size">{size}</h2></h2>
-                    <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
-                    <Link to="/cart"><button className="view-cart"><span>View Cart</span></button></Link>
+                        <h2 className="item-color">Color,<br/>{color}</h2>
+                        <h2 className="item-size">Size,<br/>{size}</h2>
                     </div>
+                    <div className="cart-btn-container">
+                        <button className="add-to-cart" onClick={this.addToCart}>Add to Cart</button>
+                        <Link to="/cart"><button className="view-cart"><span>View Cart</span></button></Link>
+                    </div>
+                    <section className="product-specs">
+                        <h2 className="lead-features">Features</h2>
+                        <ul>
+                            <li>
+                                <p>Plain color t-shirts are 100% Cotton, Heather Grey is 90%<br/> 
+                                Cotton/10% Polyester, Charcoal Heather is 52% Cotton/48%<br/>Polyester</p>
+                            </li>
+                            <li>
+                                <p>Ethnically sourced</p>
+                            </li>
+                            <li>
+                                <p>Slim fit, but if that's not your thing, order a size up</p>
+                            </li>
+                            <li>
+                                <p>4.2oz/145g, but if that's too light, try our heavier classic tee</p>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         )

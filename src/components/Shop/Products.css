@@ -29,7 +29,8 @@
   margin-top: auto; }
 
 .product-img {
-  max-width: 100%; }
+  max-width: 100%;
+  border: 1px solid #f2f2f6; }
 
 #product-name {
   margin: 0;
