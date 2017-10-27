@@ -30,13 +30,14 @@ body {
     position: absolute;
     top: 57%;
     left: 17%;
+    font-family: $primary-font;
     font-size: 16px;
+    font-weight: 400;
     padding-top: 13px;
     padding-bottom: 15px;
     letter-spacing: 0.04em;
     line-height: 1.2em;
     text-shadow: none;
-    font-weight: 400;
     width: 58%;
     margin: 0px 9px;
 }
@@ -67,5 +68,6 @@ body {
         position: absolute;
         top: 58%;
         left: 26%;
+        word-break: break-all;
     }
 }

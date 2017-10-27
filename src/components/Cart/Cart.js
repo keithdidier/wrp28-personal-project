@@ -37,12 +37,14 @@ class Cart extends Component {
                         <img className="details-img-cart" src={item.image_url}/>
                         <div className="item-details-cart">
                             {/* <h2 className="item-title-cart">{item.product_name}</h2> */}
-                            <h2 className="item-size-cart">{item.size},</h2>
-                            <h2 className="item-color-cart">{item.color}</h2>
-                            <h2 className="item-price-cart">${item.price}</h2>
+                            <div className="item-details-cart-h2">
+                                <h2 className="item-size-cart">{item.size},</h2>
+                                <h2 className="item-color-cart">{item.color}</h2>
+                                <h2 className="item-price-cart">${item.price}</h2>
+                            </div>
                             <span className="delete-icon" 
                             onClick={() =>{this.props.removeFromCart(item.cart_id, this.props.userId)}}>
-                            <i className="fa fa-times-circle" aria-hidden="true"></i></span>
+                            <i className="fa fa-times-circle fa-lg" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 ))
