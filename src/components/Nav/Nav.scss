@@ -41,13 +41,14 @@
 }
 
 #search-icon {
-    position: absolute;
-    z-index: 1;
-    top: 28%;
-    left: 4%;
-    color: $icon-color;
-    cursor: pointer;
-    width: 0;
+    float: left;
+    // position: absolute;
+    // z-index: 1;
+    // top: 28%;
+    // left: 4%;
+    // color: $icon-color;
+    // cursor: pointer;
+    // width: 0;
 }
 .mobile-search-input {
     width: 100%;

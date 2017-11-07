@@ -12,8 +12,9 @@ const stripe = require('stripe')('config.secret_key');
 
 
 
-const app = express();
 
+const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
 app.use(bodyParser.json());
 app.use(session({
     secret: process.env.SECRET,
