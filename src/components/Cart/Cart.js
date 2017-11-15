@@ -4,6 +4,7 @@ import {addToCart} from '../../ducks/reducer';
 import {getDetails} from '../../ducks/reducer';
 import {getItemsInCart} from '../../ducks/reducer';
 import {removeFromCart} from '../../ducks/reducer';
+import {getUser} from '../../ducks/reducer';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import emptyCart from '../../assets/empty-cart.gif';
@@ -17,8 +18,11 @@ class Cart extends Component {
         }
     }
 
-    componentDidMount() { 
-        this.props.getItemsInCart(this.props.userId)
+    componentDidMount() {
+        if(!this.props.userId) {
+            this.props.getUser().then(() => {this.props.getItemsInCart(this.props.userId)})
+        } 
+        else this.props.getItemsInCart(this.props.userId)
     }
 
     render() {
@@ -61,4 +65,4 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connect(mapStateToProps, {addToCart, getDetails, getItemsInCart, removeFromCart})(Cart);
+export default connect(mapStateToProps, {addToCart, getDetails, getItemsInCart, removeFromCart, getUser})(Cart);

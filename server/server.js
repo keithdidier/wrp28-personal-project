@@ -36,7 +36,7 @@ passport.use(new Auth0Strategy({
     clientSecret: process.env.AUTH_CLIENT_SECRET,
     callbackURL: process.env.CALLBACK_URL
 }, function (accessToken, refreshToken, extraParams, profile, done) {
-
+    console.log('profile', profile);
     const db = app.get('db');
 
     db.find_user([profile.identities[0].user_id]).then(user => {
@@ -75,10 +75,12 @@ app.get('/auth/logout', (req, res) => {
 
 
 passport.serializeUser(function (id, done) {
+    console.log('ser ID', id);
     done(null, id);
 })
 
 passport.deserializeUser(function (id, done) {
+    console.log('des ID', id);
     app.get('db').find_current_user([id]
     ).then( user => {
         done(null, user[0]);
