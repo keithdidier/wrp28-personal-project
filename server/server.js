@@ -113,5 +113,5 @@ app.delete('/api/cart/remove/:cart_id/:user_id', cart_controller.removeFromCart)
     // User controller
 app.get('/api/current/user', users_controller.getCurrentUser);
 
-const PORT = 3010;
+const PORT = 8081;
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
