@@ -22,12 +22,13 @@ export default class Nav extends Component {
                         <Link to='/cart' className="cart-icon"><i className="fa fa-shopping-cart" aria-hidden="true"></i></Link>
                     </div>
                 </div>
-                <form className="search-form">
+                <p>This web application is a student project inspired by redbubble.com and does not allow for actual purchasing of items. To use this site, login with these login credentials: username: test@email.com | password: test</p>
+                {/* <form className="search-form">
                     <i id="search-icon" className="fa fa-search" aria-hidden="true"></i>
                     <input className="mobile-search-input"
                      type="search" 
                      placeholder="Search products by color, name, and price..." /> 
-                </form>
+                </form> */}
             </div>
         )
     }

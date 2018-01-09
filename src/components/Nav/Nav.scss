@@ -3,6 +3,12 @@
 
 .nav-wrapper {
     margin-bottom: 15px;
+    p {
+        font-size: 0.7rem;
+        color: $text-color;
+        text-align: center;
+        word-wrap: break-word;
+    }
 }
 
 .brand-mark {
