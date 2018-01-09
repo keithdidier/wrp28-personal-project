@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400");
 .nav-wrapper {
   margin-bottom: 15px; }
+  .nav-wrapper p {
+    font-size: 0.7rem;
+    color: #4B4F59;
+    text-align: center;
+    word-wrap: break-word; }
 
 .brand-mark {
   width: 200px; }
